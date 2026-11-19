@@ -1,41 +1,66 @@
-# DRIPLAB — conexão entre frontend e backend
+# DRIPLAB #
 
-## 1. Configurar o banco
-Dentro de `backend`, crie um arquivo `.env` copiando o modelo `.env.example`.
-Preencha DB_HOST, DB_PORT, DB_NAME, DB_USER e DB_PASSWORD com os dados do seu MySQL.
-Defina também JWT_SECRET com uma chave aleatória de pelo menos 24 caracteres.
 
-## 2. Instalar dependências
-Abra o terminal na pasta `backend` e execute:
-```bash
-npm install
-```
 
-## 3. Iniciar a API
-Ainda na pasta `backend`, execute:
-```bash
-npm start
-```
-O servidor usa a porta definida em PORT (por padrão, 3000).
+## 1. Nome e descrição do projeto
 
-## 4. Abrir o site
-Com o servidor ligado, abra:
-`http://localhost:3000/html/index.html`
+O **DRIPLAB** é uma plataforma de comércio digital-first de roupas desenvolvida com o objetivo de apresentar e comercializar produtos do segmento de moda urbana e streetwear. O sistema oferece uma interface intuitiva, permitindo que os usuários naveguem pelo catálogo de produtos, consultem informações e tenham acesso às funcionalidades de compra.
 
-Não abra as páginas por `file://` nem use Live Server para testar a integração. Abrir pelo servidor Express evita problemas de origem/CORS.
 
-## Rotas conectadas
-- POST `/api/auth/cadastro` — cadastro
-- POST `/api/auth/login` — login
-- GET `/api/produtos` — lista produtos
-- GET `/api/produtos/:id` — detalhes de produto
-- POST `/api/pedidos` — criar pedido autenticado
-- GET `/api/pedidos/meus` — consultar pedidos do usuário autenticado
 
-## Observações
-- Cadastros exigem nome, username, email, telefone e senha com pelo menos 8 caracteres.
-- O login usa email e senha.
-- A home carrega produtos cadastrados no banco. Se não houver produtos, aparecerá a mensagem de catálogo vazio.
-- O carrinho desta versão é mantido no navegador (localStorage). A criação efetiva do pedido ainda precisa de uma tela/formulário de endereço e forma de pagamento.
-- O backend deste ZIP não possui tabela/modelo Drop; as referências a esse modelo foram removidas para que as rotas de produtos e pedidos funcionem com os modelos existentes.
-- O arquivo `.env` original não foi incluído no ZIP por conter credenciais. Crie seu próprio `.env` a partir de `.env.example`.
+## 2. Objetivo do sistema
+
+O objetivo do DRIPLAB é desenvolver uma loja virtual que facilite a divulgação e a comercialização de produtos de moda urbana por meio de uma plataforma digital. O projeto busca proporcionar uma experiência de navegação simples e organizada, além de integrar o frontend, backend e banco de dados para armazenar e gerenciar as informações do sistema.
+
+
+
+## 3. Funcionalidades
+
+O sistema conta com as seguintes funcionalidades:
+
+- Cadastro de usuários.
+- Login e autenticação de usuários.
+- Exibição e listagem de produtos.
+- Visualização de informações individuais dos produtos.
+- Pesquisa de produtos.
+- Carrinho de compras.
+- Gerenciamento da quantidade de produtos no carrinho.
+- Armazenamento e gerenciamento de informações dos usuários e produtos.
+- Integração entre frontend, backend e banco de dados.
+
+
+
+## 4. Tecnologias utilizadas
+
+Para o desenvolvimento do DRIPLAB, foram utilizadas as seguintes tecnologias:
+
+- HTML5: estruturação das páginas do sistema.
+- CSS3: estilização e criação do layout, incluindo a responsividade.
+- JavaScript: implementação das funcionalidades e interações da interface.
+- Node.js: ambiente de execução do backend.
+- Express.js: criação e gerenciamento das rotas da API.
+- Sequelize: ORM utilizado para realizar a comunicação entre o backend e o banco de dados.
+- MySQL: sistema de gerenciamento do banco de dados.
+- JWT: autenticação e gerenciamento de sessões dos usuários.
+- Bcrypt: criptografia das senhas dos usuários.
+
+
+
+## 5. Link do site publicado
+
+O site poderá ser acessado pelo seguinte endereço:
+
+**Link:** [INSERIR LINK DO SITE PUBLICADO]
+
+
+
+## 6. Modelagem do banco de dados
+
+O banco de dados do DRIPLAB foi desenvolvido utilizando o MySQL, com o objetivo de armazenar e organizar as informações necessárias para o funcionamento da plataforma.
+
+A modelagem contempla as entidades responsáveis pelo gerenciamento dos usuários, produtos e operações relacionadas às compras.
+
+Os documentos de modelagem estão disponíveis na pasta *diagramas*, incluindo:
+- Modelagem conceitual.
+- Modelagem lógica.
+- Diagrama Entidade-Relacionamento (DER).
