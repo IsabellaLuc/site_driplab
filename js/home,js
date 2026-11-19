@@ -1,0 +1,17 @@
+async function carregarProdutos() {
+    try {
+        const resposta = await fetch('http://localhost:3000/produtos');
+
+        const produtos = await resposta.json();
+
+        console.log(produtos);
+
+        // Aqui você percorre os produtos
+        // e cria os elementos HTML para exibi-los.
+
+    } catch (erro) {
+        console.error('Erro ao carregar produtos:', erro);
+    }
+}
+
+carregarProdutos();
